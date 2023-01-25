@@ -12,7 +12,7 @@ public class Stepdefination_Flipkart extends BaseClass_fb {
 PageObjectManager obj=new PageObjectManager(driver);
 @Given("User Launch Chrome Browser")
 public void user_launch_chrome_browser() {
-    browserLaunch("https://www.flipkart.com/");
+    browserLaunch("chrome", "https://www.flipkart.com/");
 }
 @Given("Handle the login popup")
 public void handle_the_login_popup() {
@@ -55,7 +55,7 @@ public void user_closing_the_browser() {
 //Adactin_Task
 @Given("User Launches the Chrome Browser")
 public void user_launches_the_chrome_browser() {
-    browserLaunch("https://adactinhotelapp.com/");
+    browserLaunch("chrome", "https://adactinhotelapp.com/");
 }
 @Given("Verify land and Login page")
 public void verify_land_and_login_page() {

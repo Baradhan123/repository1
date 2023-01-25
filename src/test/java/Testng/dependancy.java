@@ -9,7 +9,7 @@ public class dependancy extends BaseClass_fb{
 	PageObjectManager obj=new PageObjectManager(driver);
 	@Test (priority=1)
 private void browserlaunch() {
-		browserLaunch("https://www.facebook.com/");
+		browserLaunch("chrome", "https://www.facebook.com/");
 	System.out.println("Browser Launch");
 }
 	@Test (dependsOnMethods = "browserlaunch" )

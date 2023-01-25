@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -19,10 +20,22 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass_fb {
 public static WebDriver driver;
-public static void browserLaunch(String url) {
-	WebDriverManager.chromedriver().setup();  
-	//System.setProperty("webdriver.chrome.driver", ".\\Chrome Driver\\chromedriver.exe");
-	driver=new ChromeDriver();
+public static void browserLaunch(String option,String url) {
+	if (option.equalsIgnoreCase("chrome")) {
+		WebDriverManager.chromedriver().setup();
+		driver=new ChromeDriver();
+	}
+	else if (option.equalsIgnoreCase("edge")) {
+		WebDriverManager.edgedriver().setup();
+		driver=new EdgeDriver();
+	} 
+	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+	windowMax();
+	getUrl(url);
+}
+public static void edgebrowser_Launch(String url) {
+	System.setProperty("webdriver.edge.driver", ".\\Edge Driver\\msedgedriver.exe");
+	driver=new EdgeDriver();
 	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 	windowMax();
 	getUrl(url);

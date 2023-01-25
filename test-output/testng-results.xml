@@ -1,25 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-01-23T13:29:01 IST" name="Default suite" finished-at="2023-01-23T13:30:07 IST" duration-ms="65580">
+  <suite started-at="2023-01-25T13:49:02 IST" name="Suite" finished-at="2023-01-25T13:50:40 IST" duration-ms="98283">
     <groups>
     </groups>
-    <test started-at="2023-01-23T13:29:01 IST" name="Default test" finished-at="2023-01-23T13:30:07 IST" duration-ms="65580">
-      <class name="Testng.dependancy">
-        <test-method signature="browserlaunch()[pri:1, instance:Testng.dependancy@3e58a80e]" started-at="2023-01-23T13:29:02 IST" name="browserlaunch" finished-at="2023-01-23T13:30:05 IST" duration-ms="63309" status="PASS">
+    <test started-at="2023-01-25T13:49:02 IST" name="TestChrome" finished-at="2023-01-25T13:50:08 IST" duration-ms="66347">
+      <class name="Testng.CrossBrowsing1">
+        <test-method signature="browsingLaunch(java.lang.String)[pri:0, instance:Testng.CrossBrowsing1@4f6ee6e4]" started-at="2023-01-25T13:49:02 IST" name="browsingLaunch" finished-at="2023-01-25T13:50:08 IST" duration-ms="66123" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- browserlaunch -->
-        <test-method signature="sendkeys()[pri:0, instance:Testng.dependancy@3e58a80e]" started-at="2023-01-23T13:30:05 IST" name="sendkeys" finished-at="2023-01-23T13:30:07 IST" depends-on-methods="Testng.dependancy.browserlaunch" duration-ms="1755" status="PASS">
+        </test-method> <!-- browsingLaunch -->
+      </class> <!-- Testng.CrossBrowsing1 -->
+    </test> <!-- TestChrome -->
+    <test started-at="2023-01-25T13:50:09 IST" name="Testedge" finished-at="2023-01-25T13:50:40 IST" duration-ms="31698">
+      <class name="Testng.CrossBrowsing1">
+        <test-method signature="browsingLaunch(java.lang.String)[pri:0, instance:Testng.CrossBrowsing1@4c371370]" started-at="2023-01-25T13:50:09 IST" name="browsingLaunch" finished-at="2023-01-25T13:50:40 IST" duration-ms="31570" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- sendkeys -->
-        <test-method signature="clicklogin()[pri:0, instance:Testng.dependancy@3e58a80e]" started-at="2023-01-23T13:30:07 IST" name="clicklogin" finished-at="2023-01-23T13:30:07 IST" depends-on-methods="Testng.dependancy.sendkeys" duration-ms="312" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clicklogin -->
-      </class> <!-- Testng.dependancy -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- browsingLaunch -->
+      </class> <!-- Testng.CrossBrowsing1 -->
+    </test> <!-- Testedge -->
+  </suite> <!-- Suite -->
 </testng-results>
